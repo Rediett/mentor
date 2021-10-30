@@ -1,0 +1,540 @@
+<html>
+    <head>
+        <title>
+            Non-profit
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+        <link rel="stylesheet" href="style-index.css">
+      <style>
+        
+      </style>
+        
+    </head>
+    <body>
+        <div id="overlay_login" class="overlay">
+            <div class="container signup_page overlay_cont">
+                <i class="fas fa-h1">LOG IN</i>
+                <hr>
+                <i class="fas fa-wind-warning" id="wrong_login" style="display: none;color: red;">The email or password is incorrect</i>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="email_login" aria-describedby="emailHelp" placeholder="Enter email" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="password_login" placeholder="Password" required>
+                </div>
+                <br>
+                <button id="submit-btn-login" class="btn btn-primary">Submit</button>
+                <input name="uploadbtn" class="btn btn-danger" type="button" onclick="document.getElementById('overlay_login').style.display = 'none';document.getElementById('navbar').style.zIndex = 100;" value="Cancel">
+            </div>
+        </div>
+
+        <div id="overlay" class="overlay">
+            <div class="container signup_page overlay_cont" id="signup_page">
+                <i class="fas fa-h1">SIGN UP</i>
+                <hr>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input id="name" class="form-control" type="text" name="name" placeholder="Enter name" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="my-select">Language</label>
+                    <br>
+                    <select id="my-select-lang" class="form-control"   required>
+                        <option selected>Select one</option>
+                        <option>English</option>
+                        <option>Amharic</option>
+
+                    </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="my-select">Status</label>
+                    <br>
+                    <select id="my-select-stat" class="form-control"   required>
+                        <option selected>Select one</option>
+                        <option>Student</option>
+                        <option>Mentor</option>
+                    </select>
+                </div>
+
+                <br>
+                <div class="form-group">
+                    <label for="my-select">High school</label>
+                    <br>
+                    <select id="my-select-school" class="form-control">
+                        <option selected>Select one</option>
+                        <option>CardozoHS</option>
+                    </select>
+                </div>
+                <br>
+                <dev id="student">
+                    <i class="fas fa-h1">Student</i>
+                    <hr>
+                    <div class="form-group">
+                        <label for="my-select">Grade</label>
+                        <br>
+                        <select id="my-select-grade" class="form-control"  >
+                            <option selected>Select one</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="my-select">What kind of support are you looking for?</label>
+                        <br>
+                        <select id="my-select-support" class="form-control" >
+                            <option selected>Select one</option>
+                            <option>SAT/PSAT</option>
+                            <option >FAFSA</option>
+                            <option >Scholarship</option>
+                            <option >College application</option>
+                            <option >Common App</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="textarea" class="control-label">What would you like to get out of this experiance?</label>
+                        <div class="col-sm-10">
+                            <textarea id="textarea-student-inp" class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                </dev>
+
+                <dev id="mentor">
+                    <i class="fas fa-h1">Mentor</i>
+                    <hr>
+                    <div class="form-group">
+                        <label for="my-select">What kind of support will you provid?</label>
+                        <br>
+                        <select id="mentor-select-support" class="form-control" >
+                            <option selected>Select one</option>
+                            <option>SAT/PSAT</option>
+                            <option >FAFSA</option>
+                            <option >Scholarship</option>
+                            <option >College application</option>
+                            <option >Common App</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="my-select"> what is your highest academic achievement?</label>
+                        <br>
+                        <select id="my-select-academic" class="form-control" >
+                            <option selected>Select one</option>
+                            <option>College</option>
+                            <option >High school</option>
+                        </select>
+                    </div>
+                    <br>
+                    <dev id="college">
+                        <i class="fas fa-h1">College</i>
+                        <hr>
+                        <label for="my-select-Degree">Degree earned</label>
+                        <input type="text"   id="my-select-Degree" class="form-control" value="" pattern="" title="">
+                        <br>
+                    </dev>
+                </dev>
+                <br>
+                <button id="submit-btn" class="btn btn-primary">Submit</button>
+                <input name="uploadbtn" class="btn btn-danger" type="button" onclick="document.getElementById('overlay').style.display = 'none';document.getElementById('navbar').style.zIndex = 100;" value="Cancel">
+            </div>
+        </div>
+
+        <script>
+            var mentor = document.getElementById("mentor");
+var student = document.getElementById("student");
+var college = document.getElementById("college");
+mentor.style.display = "none";
+student.style.display = "none";
+college.style.display = "none";
+
+var stat = document.getElementById("my-select-stat");
+var mentor_college = document.getElementById("my-select-academic");
+stat.addEventListener("change",function(e){
+    if(stat.value == "Mentor"){
+        mentor.style.display = "block";
+        student.style.display = "none";
+    }else if(stat.value == "Student"){
+        mentor.style.display = "none";
+        student.style.display = "block";
+    }else{
+        student.style.display = "none";
+        mentor.style.display = "none";
+    }
+});
+
+mentor_college.addEventListener("change",function(e){
+    if(mentor_college.value == "College"){
+        college.style.display = "block";
+    }else{
+        college.style.display = "none";
+    }
+});
+
+
+
+
+var uname = document.getElementById("name");
+var email = document.getElementById("email");
+var password = document.getElementById("password");
+
+Parse.initialize("Fj8vsG7vlOoVfh3zkc40XT1w8OEf8a1z04S44LlR", "a5XMOYpOrrxFIqkixYAfilzJgCXSviGrxnpmFk7b"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+Parse.serverURL = "https://parseapi.back4app.com/";
+
+var loged_name = document.getElementById("username_loged");
+
+function add() {
+    var stat_selected = document.getElementById("my-select-stat").value;
+    var school_selected = document.getElementById("my-select-school").value;
+    
+    var stat_info = {
+        "Student": [document.getElementById("my-select-grade").value,
+            document.getElementById("my-select-support").value,
+            document.getElementById("textarea-student-inp").value,
+            document.getElementById("my-select-lang").value],
+        "Mentor": [document.getElementById("my-select-academic").value,
+            document.getElementById("my-select-Degree").value,
+            document.getElementById("my-select-lang").value]
+    };
+
+    var schoolDB_main = Parse.Object.extend(school_selected);
+    var schoolDB = new schoolDB_main();
+    schoolDB.save({
+        Name: uname.value,
+        Email: email.value,
+        Password: password.value,
+        schoolID: school_selected,
+        IsMentor: ("Mentor" == stat_selected),
+        infor_dict: stat_info,
+        info: stat_info[stat_selected]
+    }).then(function (response) {
+        document.location.reload(true);
+        console.log('school create with success! ObjectId: ' + response.id + ', ' + schoolDB.get('username'));
+    }).catch(function(error) {
+        alert('Error: ' + error.message);
+    });
+
+    var student_main = Parse.Object.extend("Student");
+    var studentDB = new student_main();
+    studentDB.save({
+        Name: uname.value,
+        Email: email.value,
+        Password: password.value,
+        SchoolID: school_selected,
+        IsMentor: ("Mentor" == stat_selected),
+        infor_dict: stat_info,
+        students_assiged: [],
+        info: stat_info[stat_selected]
+    }).then(function (response1) {
+        document.location.reload(true);
+        console.log('Student create with success! ObjectId: ' + response1.id + ', ' + studentDB.get('username'));
+    }).catch(function(error) {
+        alert('Error: ' + error.message);
+    });
+};
+
+document.getElementById("submit-btn").addEventListener("click", function (e) {
+    add();
+});
+var ment_ID = null;
+async function auth() {
+    let Students = Parse.Object.extend("Student");
+    let student = new Parse.Query(Students);
+    let response = await student.find();
+    let i = 0;
+    response.forEach(student => {
+        console.log(student.get("Email") == document.getElementById("email_login").value);
+        console.log(student.get("Password") == document.getElementById("password_login").value);
+        if ((student.get("Password") == document.getElementById("password_login").value) && (student.get("Email") == document.getElementById("email_login").value)) {
+            console.log("right!!");
+            if (student.get("IsMentor")) {
+                ment_ID = student.id;
+                console.log(ment_ID);
+            }
+            document.getElementById("username_loged").innerHTML = student.get("Name");
+            document.getElementById("not_logedin").style.display = "none";
+            document.getElementById("logedin").style.display = "block";
+            i = 1;
+            document.getElementById('overlay_login').style.display = 'none';
+            document.getElementById('navbar').style.zIndex = 100;
+            show_mentor();
+            return true;
+        }
+    });
+    if (i == 0) {
+        console.log("WRONG!!");
+        document.getElementById("wrong_login").style.display = "block";
+        return false;
+    }
+}
+document.getElementById("submit-btn-login").addEventListener("click", function (e) {
+    auth();
+});
+
+
+function display_students(dic) {
+    var main = document.getElementById("dis_students");
+
+    var m_tr = document.createElement("tr");
+
+    var th1 = document.createElement("th");
+    th1.innerHTML = dic["Name"];
+    m_tr.appendChild(th1);
+
+    var th2 = document.createElement("th");
+    th2.innerHTML = dic["Grade"];
+    m_tr.appendChild(th2);
+
+    var th3 = document.createElement("th");
+    th3.innerHTML = dic["School"];
+    m_tr.appendChild(th3);
+
+    var thl = document.createElement("th");
+    thl.innerHTML = dic["lang"];
+    m_tr.appendChild(thl);
+
+    var th4 = document.createElement("th");
+    th4.innerHTML = dic["Help needed"];
+    m_tr.appendChild(th4);
+
+    var th5 = document.createElement("th");
+    th5.innerHTML = dic["Mentor assigned"];
+    m_tr.appendChild(th5);
+
+    var th6 = document.createElement("th");
+    var th6_btn = document.createElement("button");
+    th6_btn.className = "btn btn-success";
+    th6_btn.type = "button";
+    th6_btn.innerHTML = "Accept";
+    th6_btn.setAttribute("onclick", ("assign_student(\"" + ment_ID + "\",\"" + dic["studentId"]+"\")"));
+    if (dic["Mentor assigned"] === "undefined") {
+        th6_btn.disabled = "disabled";
+    }
+    th6.appendChild(th6_btn);
+    m_tr.appendChild(th6);
+    main.appendChild(m_tr);
+
+}
+
+function display_students_assigned(dic){
+    var main = document.getElementById("dis_students");
+
+    var m_tr = document.createElement("tr");
+
+    var th1 = document.createElement("th");
+    th1.innerHTML = dic["Name"];
+    m_tr.appendChild(th1);
+
+    var th2 = document.createElement("th");
+    th2.innerHTML = dic["Grade"];
+    m_tr.appendChild(th2);
+
+    var th3 = document.createElement("th");
+    th3.innerHTML = dic["School"];
+    m_tr.appendChild(th3);
+
+    var thl = document.createElement("th");
+    thl.innerHTML = dic["lang"];
+    m_tr.appendChild(thl);
+
+    var th4 = document.createElement("th");
+    th4.innerHTML = dic["Help needed"];
+    m_tr.appendChild(th4);
+
+    var th5 = document.createElement("th");
+    th5.innerHTML = dic["Mentor assigned"];
+    m_tr.appendChild(th5);
+
+    var th6 = document.createElement("th");
+    var th6_btn = document.createElement("button");
+    th6_btn.className = "btn btn-success";
+    th6_btn.type = "button";
+    th6_btn.innerHTML = "Accept";
+    if (dic.Mentor_assin != "undifined") {
+        th6_btn.disabled = "disabled";
+    }
+    th6.appendChild(th6_btn);
+    m_tr.appendChild(th6);
+    main.appendChild(m_tr);
+
+}
+
+function assign_student(mentor_ID,student_ID) {
+    // alert("fuck yes");
+    let Students = Parse.Object.extend("Student");
+    let student = new Parse.Query(Students);
+    console.log(ment_ID+" "+student_ID);
+    student.get(mentor_ID)
+    .then((stu) => {
+    // The object was retrieved successfully.
+        var ls = stu.get("students_assiged");
+        ls.push(student_ID);
+        stu.set("students_assiged",ls);
+    }, (error) => {
+        console.log("did not work");
+    });
+}
+async function show_mentor() {
+    document.getElementById("wrong_login").style.display = "none";
+    document.getElementById("mentor_body").style.display = "block";
+    document.getElementById("cbody").style.display = "block";
+
+    let Students = Parse.Object.extend("Student");
+    let student = new Parse.Query(Students);
+    let response = await student.find();
+    response.forEach(student => {
+        if (!student.get("IsMentor")) {
+            let ans = {"studentId":student.id,student, "Name": student.get("Name"),"lang":student.get("info")[3], "Grade": student.get("info")[0], "School": student.get("SchoolID"), "Help needed": student.get("info")[1], "Mentor_assin": student.get("Mentor_assigned") };
+            display_students(ans);
+        }
+    });
+    
+}
+        </script>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top nav_bar" id="navbar">
+            <a class="navbar-brand">MyMentor</a>
+            <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="my-nav" class="collapse navbar-collapse ">
+                <ul class="navbar-nav mr-auto col-lg-9">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Donate</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Service
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Volunteer</a>
+                            <a class="dropdown-item" href="#">Scholarships</a>
+                            <a class="dropdown-item" href="#">Dual Enrollment</a>
+                            <a class="dropdown-item" href="#">Community Service</a>
+                            <a class="dropdown-item" href="#">Advanced Summer Opportunities</a>
+
+                        </div>
+                    </li>
+                </ul>
+                <div id="not_logedin" style="width: 100%;">
+                    <ul class="navbar-nav mr-auto col-lg-3" style="width: 100%;">
+                        <li class="nav-item active">
+                            <a class="nav-link" id="Login_btn" onclick="document.getElementById('overlay_login').style.display = 'block';document.getElementById('navbar').style.zIndex = 0;">LOG IN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" onclick="document.getElementById('overlay').style.display = 'block';document.getElementById('navbar').style.zIndex = 0;">SIGN UP</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="logedin" style="width: 100%;">
+                    <ul class="navbar-nav mr-auto col-lg-3" style="width: 100%;" >
+                        <li class="nav-item active">
+                            <h6 class="nav-link" id="username_loged">Acount</h6>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid home_top">
+            <div class="container top_content">
+                <h1>MyMentor</h1>
+                <hr>
+                <p>We aim to design a school-based and student-friendly service 
+                    that supports and mentors students high school students for college and career.
+                </p>
+                <button type="button" class="btn btn-primary" style="border: none; color: black; background-color: antiquewhite;width: 50%;" onclick="document.getElementById('overlay').style.display = 'block';document.getElementById('navbar').style.zIndex = 0;">GET STARTED</button><br>
+                <button type="button" class="btn btn-primary" style="background: none;border: none;width: 50%;" id="Login_btn" onclick="document.getElementById('overlay_login').style.display = 'block';document.getElementById('navbar').style.zIndex = 0;">Log in</button><br>
+            </div>
+            
+        </div>
+        <div class="container body" id="cbody">
+            <div id="mentor_body" >
+                <br>
+                <center><h2 class="fas fa-h3">Mentor</h2></center>
+                <hr>
+                <center><H5>Select a student you would like to support</H5></center>
+                <table class="table table-light" style="text-align: center;">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Name</th>
+                            <th>Grade</th>
+                            <th>School</th>
+                            <th>Language</th>
+                            <th>Help needed</th>
+                            <th>Mentor assigned</th>
+                            <th>Request</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dis_students">
+                        <tr>
+                            <th>Name</th>
+                            <th>Grade</th>
+                            <th>School</th>
+                            <th>Language</th>
+                            <th>Help needed</th>
+                            <th>Mentor assigned</th>
+                            <th><button class="btn btn-success" type="button">Accept</button></th>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <center><H5>Students Mentoring</H5></center>
+                <table class="table table-light" style="text-align: center;">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Name</th>
+                            <th>Grade</th>
+                            <th>School</th>
+                            <th>Language</th>
+                            <th>Help needed</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dis_students">
+                        <tr>
+                            <th>Name</th>
+                            <th>Grade</th>
+                            <th>School</th>
+                            <th>Help needed</th>
+                            <th><button class="btn btn-success" type="button">Accept</button></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
