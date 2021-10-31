@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>
-            Non-profit
+            MentorMeForCollege&Career
         </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,77 +12,77 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
-        <link rel="stylesheet" href="style-index.css">
-      <style>
-        html, body{
-    margin: 0;
-    padding: 0;
-    padding-top: 28px;
-    width: 100%;
-    height: 100%;
-}
+<!--         <link rel="stylesheet" href="style-index.css"> -->
+        <style>
+            html, body{
+                margin: 0;
+                padding: 0;
+                padding-top: 28px;
+                width: 100%;
+                height: 100%;
+            }
 
-.home_top{
-    background: url("https://images.pexels.com/photos/6325982/pexels-photo-6325982.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    height: 100%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    /* text-align: center; */
-}
-.nav_bar{
-    padding-left: 1pc;
-}
-.top_content{
-    border-radius: 9px;
-    width: 40%;
-    box-shadow: rgb(46 46 46 / 43%) 5px 0px 8px 1px;
-    background-color: rgba(22, 20, 20, 0.512);
-    padding: 30px;
-    color: white;
-    margin-left: 10pc;
+            .home_top{
+                background: url("https://images.pexels.com/photos/6325982/pexels-photo-6325982.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+                height: 100%;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                align-items: center;
+                /* text-align: center; */
+            }
+            .nav_bar{
+                padding-left: 1pc;
+            }
+            .top_content{
+                border-radius: 9px;
+                width: 40%;
+                box-shadow: rgb(46 46 46 / 43%) 5px 0px 8px 1px;
+                background-color: rgba(22, 20, 20, 0.512);
+                padding: 30px;
+                color: white;
+                margin-left: 10pc;
 
-}
-.body{
-    background-color: antiquewhite;
-    display: none;
-    margin-top: 10px;
-    height: 1000px;
-}
-.overlay {
-    position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 2;
-    cursor: pointer;
-}
-.overlay_cont{
-    background-color: antiquewhite;
-    /* text-align: center; */
-    padding: 20px;
-    margin-top: 30px;
-}
+            }
+            .body{
+                background-color: antiquewhite;
+                display: none;
+                margin-top: 10px;
+                height: 1000px;
+            }
+            .overlay {
+                position: fixed;
+                display: none;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                overflow-x: hidden;
+                overflow-y: auto;
+                background-color: rgba(0,0,0,0.5);
+                z-index: 2;
+                cursor: pointer;
+            }
+            .overlay_cont{
+                background-color: antiquewhite;
+                /* text-align: center; */
+                padding: 20px;
+                margin-top: 30px;
+            }
 
-#mentor_body{
-    display: none;
-}
-#logedin{
-    display: none;
-}
-#not_logedin{
-    display: block;
-}
-      </style>
+            #mentor_body{
+                display: none;
+            }
+            #logedin{
+                display: none;
+            }
+            #not_logedin{
+                display: block;
+            }
+        </style>
         
     </head>
     <body>
@@ -108,7 +108,7 @@
 
         <div id="overlay" class="overlay">
             <div class="container signup_page overlay_cont" id="signup_page">
-                <i class="fas fa-h1">SIGN UP</i>
+                <i class="fas fa-h1">SIGN UP'S</i>
                 <hr>
                 <div class="form-group">
                     <label for="name">Name</label>
@@ -175,11 +175,16 @@
                         <br>
                         <select id="my-select-support" class="form-control" >
                             <option selected>Select one</option>
-                            <option>SAT/PSAT</option>
+                            <option >P/SAT</option>
                             <option >FAFSA</option>
-                            <option >Scholarship</option>
+                            <option >Scholarships’ Applications</option>
                             <option >College application</option>
-                            <option >Common App</option>
+                            <option >Naviance/Common App</option>
+                            <option >College & Scholarships’ Essays</option>
+                            <option >Choosing Colleges & Universities</option>
+                            <option >College Tours</option>
+                            <option >Transitions from HS to College</option>
+                        </select>
                         </select>
                     </div>
                     <br>
@@ -195,15 +200,19 @@
                     <i class="fas fa-h1">Mentor</i>
                     <hr>
                     <div class="form-group">
-                        <label for="my-select">What kind of support will you provid?</label>
+                        <label for="my-select">What kind of support will you provide?</label>
                         <br>
                         <select id="mentor-select-support" class="form-control" >
                             <option selected>Select one</option>
-                            <option>SAT/PSAT</option>
+                            <option >P/SAT</option>
                             <option >FAFSA</option>
-                            <option >Scholarship</option>
+                            <option >Scholarships’ Applications</option>
                             <option >College application</option>
-                            <option >Common App</option>
+                            <option >Naviance/Common App</option>
+                            <option >College & Scholarships’ Essays</option>
+                            <option >Choosing Colleges & Universities</option>
+                            <option >College Tours</option>
+                            <option >Transitions from HS to College</option>
                         </select>
                     </div>
                     <br>
@@ -233,258 +242,258 @@
 
         <script>
             var mentor = document.getElementById("mentor");
-var student = document.getElementById("student");
-var college = document.getElementById("college");
-mentor.style.display = "none";
-student.style.display = "none";
-college.style.display = "none";
+            var student = document.getElementById("student");
+            var college = document.getElementById("college");
+            mentor.style.display = "none";
+            student.style.display = "none";
+            college.style.display = "none";
 
-var stat = document.getElementById("my-select-stat");
-var mentor_college = document.getElementById("my-select-academic");
-stat.addEventListener("change",function(e){
-    if(stat.value == "Mentor"){
-        mentor.style.display = "block";
-        student.style.display = "none";
-    }else if(stat.value == "Student"){
-        mentor.style.display = "none";
-        student.style.display = "block";
-    }else{
-        student.style.display = "none";
-        mentor.style.display = "none";
-    }
-});
+            var stat = document.getElementById("my-select-stat");
+            var mentor_college = document.getElementById("my-select-academic");
+            stat.addEventListener("change",function(e){
+                if(stat.value == "Mentor"){
+                    mentor.style.display = "block";
+                    student.style.display = "none";
+                }else if(stat.value == "Student"){
+                    mentor.style.display = "none";
+                    student.style.display = "block";
+                }else{
+                    student.style.display = "none";
+                    mentor.style.display = "none";
+                }
+            });
 
-mentor_college.addEventListener("change",function(e){
-    if(mentor_college.value == "College"){
-        college.style.display = "block";
-    }else{
-        college.style.display = "none";
-    }
-});
-
-
+            mentor_college.addEventListener("change",function(e){
+                if(mentor_college.value == "College"){
+                    college.style.display = "block";
+                }else{
+                    college.style.display = "none";
+                }
+            });
 
 
-var uname = document.getElementById("name");
-var email = document.getElementById("email");
-var password = document.getElementById("password");
 
-Parse.initialize("Fj8vsG7vlOoVfh3zkc40XT1w8OEf8a1z04S44LlR", "a5XMOYpOrrxFIqkixYAfilzJgCXSviGrxnpmFk7b"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
-Parse.serverURL = "https://parseapi.back4app.com/";
 
-var loged_name = document.getElementById("username_loged");
+            var uname = document.getElementById("name");
+            var email = document.getElementById("email");
+            var password = document.getElementById("password");
 
-function add() {
-    var stat_selected = document.getElementById("my-select-stat").value;
-    var school_selected = document.getElementById("my-select-school").value;
-    
-    var stat_info = {
-        "Student": [document.getElementById("my-select-grade").value,
-            document.getElementById("my-select-support").value,
-            document.getElementById("textarea-student-inp").value,
-            document.getElementById("my-select-lang").value],
-        "Mentor": [document.getElementById("my-select-academic").value,
-            document.getElementById("my-select-Degree").value,
-            document.getElementById("my-select-lang").value]
-    };
+            Parse.initialize("Fj8vsG7vlOoVfh3zkc40XT1w8OEf8a1z04S44LlR", "a5XMOYpOrrxFIqkixYAfilzJgCXSviGrxnpmFk7b"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+            Parse.serverURL = "https://parseapi.back4app.com/";
 
-    var schoolDB_main = Parse.Object.extend(school_selected);
-    var schoolDB = new schoolDB_main();
-    schoolDB.save({
-        Name: uname.value,
-        Email: email.value,
-        Password: password.value,
-        schoolID: school_selected,
-        IsMentor: ("Mentor" == stat_selected),
-        infor_dict: stat_info,
-        info: stat_info[stat_selected]
-    }).then(function (response) {
-        document.location.reload(true);
-        console.log('school create with success! ObjectId: ' + response.id + ', ' + schoolDB.get('username'));
-    }).catch(function(error) {
-        alert('Error: ' + error.message);
-    });
+            var loged_name = document.getElementById("username_loged");
 
-    var student_main = Parse.Object.extend("Student");
-    var studentDB = new student_main();
-    studentDB.save({
-        Name: uname.value,
-        Email: email.value,
-        Password: password.value,
-        SchoolID: school_selected,
-        IsMentor: ("Mentor" == stat_selected),
-        infor_dict: stat_info,
-        students_assiged: [],
-        info: stat_info[stat_selected]
-    }).then(function (response1) {
-        document.location.reload(true);
-        console.log('Student create with success! ObjectId: ' + response1.id + ', ' + studentDB.get('username'));
-    }).catch(function(error) {
-        alert('Error: ' + error.message);
-    });
-};
+            function add() {
+                var stat_selected = document.getElementById("my-select-stat").value;
+                var school_selected = document.getElementById("my-select-school").value;
 
-document.getElementById("submit-btn").addEventListener("click", function (e) {
-    add();
-});
-var ment_ID = null;
-async function auth() {
-    let Students = Parse.Object.extend("Student");
-    let student = new Parse.Query(Students);
-    let response = await student.find();
-    let i = 0;
-    response.forEach(student => {
-        console.log(student.get("Email") == document.getElementById("email_login").value);
-        console.log(student.get("Password") == document.getElementById("password_login").value);
-        if ((student.get("Password") == document.getElementById("password_login").value) && (student.get("Email") == document.getElementById("email_login").value)) {
-            console.log("right!!");
-            if (student.get("IsMentor")) {
-                ment_ID = student.id;
-                console.log(ment_ID);
+                var stat_info = {
+                    "Student": [document.getElementById("my-select-grade").value,
+                        document.getElementById("my-select-support").value,
+                        document.getElementById("textarea-student-inp").value,
+                        document.getElementById("my-select-lang").value],
+                    "Mentor": [document.getElementById("my-select-academic").value,
+                        document.getElementById("my-select-Degree").value,
+                        document.getElementById("my-select-lang").value]
+                };
+
+                var schoolDB_main = Parse.Object.extend(school_selected);
+                var schoolDB = new schoolDB_main();
+                schoolDB.save({
+                    Name: uname.value,
+                    Email: email.value,
+                    Password: password.value,
+                    schoolID: school_selected,
+                    IsMentor: ("Mentor" == stat_selected),
+                    infor_dict: stat_info,
+                    info: stat_info[stat_selected]
+                }).then(function (response) {
+                    document.location.reload(true);
+                    console.log('school create with success! ObjectId: ' + response.id + ', ' + schoolDB.get('username'));
+                }).catch(function(error) {
+                    alert('Error: ' + error.message);
+                });
+
+                var student_main = Parse.Object.extend("Student");
+                var studentDB = new student_main();
+                studentDB.save({
+                    Name: uname.value,
+                    Email: email.value,
+                    Password: password.value,
+                    SchoolID: school_selected,
+                    IsMentor: ("Mentor" == stat_selected),
+                    infor_dict: stat_info,
+                    students_assiged: [],
+                    info: stat_info[stat_selected]
+                }).then(function (response1) {
+                    document.location.reload(true);
+                    console.log('Student create with success! ObjectId: ' + response1.id + ', ' + studentDB.get('username'));
+                }).catch(function(error) {
+                    alert('Error: ' + error.message);
+                });
+            };
+
+            document.getElementById("submit-btn").addEventListener("click", function (e) {
+                add();
+            });
+            var ment_ID = null;
+            async function auth() {
+                let Students = Parse.Object.extend("Student");
+                let student = new Parse.Query(Students);
+                let response = await student.find();
+                let i = 0;
+                response.forEach(student => {
+                    console.log(student.get("Email") == document.getElementById("email_login").value);
+                    console.log(student.get("Password") == document.getElementById("password_login").value);
+                    if ((student.get("Password") == document.getElementById("password_login").value) && (student.get("Email") == document.getElementById("email_login").value)) {
+                        console.log("right!!");
+                        if (student.get("IsMentor")) {
+                            ment_ID = student.id;
+                            console.log(ment_ID);
+                        }
+                        document.getElementById("username_loged").innerHTML = student.get("Name");
+                        document.getElementById("not_logedin").style.display = "none";
+                        document.getElementById("logedin").style.display = "block";
+                        i = 1;
+                        document.getElementById('overlay_login').style.display = 'none';
+                        document.getElementById('navbar').style.zIndex = 100;
+                        show_mentor();
+                        return true;
+                    }
+                });
+                if (i == 0) {
+                    console.log("WRONG!!");
+                    document.getElementById("wrong_login").style.display = "block";
+                    return false;
+                }
             }
-            document.getElementById("username_loged").innerHTML = student.get("Name");
-            document.getElementById("not_logedin").style.display = "none";
-            document.getElementById("logedin").style.display = "block";
-            i = 1;
-            document.getElementById('overlay_login').style.display = 'none';
-            document.getElementById('navbar').style.zIndex = 100;
-            show_mentor();
-            return true;
-        }
-    });
-    if (i == 0) {
-        console.log("WRONG!!");
-        document.getElementById("wrong_login").style.display = "block";
-        return false;
-    }
-}
-document.getElementById("submit-btn-login").addEventListener("click", function (e) {
-    auth();
-});
+            document.getElementById("submit-btn-login").addEventListener("click", function (e) {
+                auth();
+            });
 
 
-function display_students(dic) {
-    var main = document.getElementById("dis_students");
+            function display_students(dic) {
+                var main = document.getElementById("dis_students");
 
-    var m_tr = document.createElement("tr");
+                var m_tr = document.createElement("tr");
 
-    var th1 = document.createElement("th");
-    th1.innerHTML = dic["Name"];
-    m_tr.appendChild(th1);
+                var th1 = document.createElement("th");
+                th1.innerHTML = dic["Name"];
+                m_tr.appendChild(th1);
 
-    var th2 = document.createElement("th");
-    th2.innerHTML = dic["Grade"];
-    m_tr.appendChild(th2);
+                var th2 = document.createElement("th");
+                th2.innerHTML = dic["Grade"];
+                m_tr.appendChild(th2);
 
-    var th3 = document.createElement("th");
-    th3.innerHTML = dic["School"];
-    m_tr.appendChild(th3);
+                var th3 = document.createElement("th");
+                th3.innerHTML = dic["School"];
+                m_tr.appendChild(th3);
 
-    var thl = document.createElement("th");
-    thl.innerHTML = dic["lang"];
-    m_tr.appendChild(thl);
+                var thl = document.createElement("th");
+                thl.innerHTML = dic["lang"];
+                m_tr.appendChild(thl);
 
-    var th4 = document.createElement("th");
-    th4.innerHTML = dic["Help needed"];
-    m_tr.appendChild(th4);
+                var th4 = document.createElement("th");
+                th4.innerHTML = dic["Help needed"];
+                m_tr.appendChild(th4);
 
-    var th5 = document.createElement("th");
-    th5.innerHTML = dic["Mentor assigned"];
-    m_tr.appendChild(th5);
+                var th5 = document.createElement("th");
+                th5.innerHTML = dic["Mentor assigned"];
+                m_tr.appendChild(th5);
 
-    var th6 = document.createElement("th");
-    var th6_btn = document.createElement("button");
-    th6_btn.className = "btn btn-success";
-    th6_btn.type = "button";
-    th6_btn.innerHTML = "Accept";
-    th6_btn.setAttribute("onclick", ("assign_student(\"" + ment_ID + "\",\"" + dic["studentId"]+"\")"));
-    if (dic["Mentor assigned"] === "undefined") {
-        th6_btn.disabled = "disabled";
-    }
-    th6.appendChild(th6_btn);
-    m_tr.appendChild(th6);
-    main.appendChild(m_tr);
+                var th6 = document.createElement("th");
+                var th6_btn = document.createElement("button");
+                th6_btn.className = "btn btn-success";
+                th6_btn.type = "button";
+                th6_btn.innerHTML = "Accept";
+                th6_btn.setAttribute("onclick", ("assign_student(\"" + ment_ID + "\",\"" + dic["studentId"]+"\")"));
+                if (dic["Mentor assigned"] === "undefined") {
+                    th6_btn.disabled = "disabled";
+                }
+                th6.appendChild(th6_btn);
+                m_tr.appendChild(th6);
+                main.appendChild(m_tr);
 
-}
+            }
 
-function display_students_assigned(dic){
-    var main = document.getElementById("dis_students");
+            function display_students_assigned(dic){
+                var main = document.getElementById("dis_students");
 
-    var m_tr = document.createElement("tr");
+                var m_tr = document.createElement("tr");
 
-    var th1 = document.createElement("th");
-    th1.innerHTML = dic["Name"];
-    m_tr.appendChild(th1);
+                var th1 = document.createElement("th");
+                th1.innerHTML = dic["Name"];
+                m_tr.appendChild(th1);
 
-    var th2 = document.createElement("th");
-    th2.innerHTML = dic["Grade"];
-    m_tr.appendChild(th2);
+                var th2 = document.createElement("th");
+                th2.innerHTML = dic["Grade"];
+                m_tr.appendChild(th2);
 
-    var th3 = document.createElement("th");
-    th3.innerHTML = dic["School"];
-    m_tr.appendChild(th3);
+                var th3 = document.createElement("th");
+                th3.innerHTML = dic["School"];
+                m_tr.appendChild(th3);
 
-    var thl = document.createElement("th");
-    thl.innerHTML = dic["lang"];
-    m_tr.appendChild(thl);
+                var thl = document.createElement("th");
+                thl.innerHTML = dic["lang"];
+                m_tr.appendChild(thl);
 
-    var th4 = document.createElement("th");
-    th4.innerHTML = dic["Help needed"];
-    m_tr.appendChild(th4);
+                var th4 = document.createElement("th");
+                th4.innerHTML = dic["Help needed"];
+                m_tr.appendChild(th4);
 
-    var th5 = document.createElement("th");
-    th5.innerHTML = dic["Mentor assigned"];
-    m_tr.appendChild(th5);
+                var th5 = document.createElement("th");
+                th5.innerHTML = dic["Mentor assigned"];
+                m_tr.appendChild(th5);
 
-    var th6 = document.createElement("th");
-    var th6_btn = document.createElement("button");
-    th6_btn.className = "btn btn-success";
-    th6_btn.type = "button";
-    th6_btn.innerHTML = "Accept";
-    if (dic.Mentor_assin != "undifined") {
-        th6_btn.disabled = "disabled";
-    }
-    th6.appendChild(th6_btn);
-    m_tr.appendChild(th6);
-    main.appendChild(m_tr);
+                var th6 = document.createElement("th");
+                var th6_btn = document.createElement("button");
+                th6_btn.className = "btn btn-success";
+                th6_btn.type = "button";
+                th6_btn.innerHTML = "Accept";
+                if (dic.Mentor_assin != "undifined") {
+                    th6_btn.disabled = "disabled";
+                }
+                th6.appendChild(th6_btn);
+                m_tr.appendChild(th6);
+                main.appendChild(m_tr);
 
-}
+            }
 
-function assign_student(mentor_ID,student_ID) {
-    // alert("fuck yes");
-    let Students = Parse.Object.extend("Student");
-    let student = new Parse.Query(Students);
-    console.log(ment_ID+" "+student_ID);
-    student.get(mentor_ID)
-    .then((stu) => {
-    // The object was retrieved successfully.
-        var ls = stu.get("students_assiged");
-        ls.push(student_ID);
-        stu.set("students_assiged",ls);
-    }, (error) => {
-        console.log("did not work");
-    });
-}
-async function show_mentor() {
-    document.getElementById("wrong_login").style.display = "none";
-    document.getElementById("mentor_body").style.display = "block";
-    document.getElementById("cbody").style.display = "block";
+            function assign_student(mentor_ID,student_ID) {
+                // alert("fuck yes");
+                let Students = Parse.Object.extend("Student");
+                let student = new Parse.Query(Students);
+                console.log(ment_ID+" "+student_ID);
+                student.get(mentor_ID)
+                .then((stu) => {
+                // The object was retrieved successfully.
+                    var ls = stu.get("students_assiged");
+                    ls.push(student_ID);
+                    stu.set("students_assiged",ls);
+                }, (error) => {
+                    console.log("did not work");
+                });
+            }
+            async function show_mentor() {
+                document.getElementById("wrong_login").style.display = "none";
+                document.getElementById("mentor_body").style.display = "block";
+                document.getElementById("cbody").style.display = "block";
 
-    let Students = Parse.Object.extend("Student");
-    let student = new Parse.Query(Students);
-    let response = await student.find();
-    response.forEach(student => {
-        if (!student.get("IsMentor")) {
-            let ans = {"studentId":student.id,student, "Name": student.get("Name"),"lang":student.get("info")[3], "Grade": student.get("info")[0], "School": student.get("SchoolID"), "Help needed": student.get("info")[1], "Mentor_assin": student.get("Mentor_assigned") };
-            display_students(ans);
-        }
-    });
-    
-}
+                let Students = Parse.Object.extend("Student");
+                let student = new Parse.Query(Students);
+                let response = await student.find();
+                response.forEach(student => {
+                    if (!student.get("IsMentor")) {
+                        let ans = {"studentId":student.id,student, "Name": student.get("Name"),"lang":student.get("info")[3], "Grade": student.get("info")[0], "School": student.get("SchoolID"), "Help needed": student.get("info")[1], "Mentor_assin": student.get("Mentor_assigned") };
+                        display_students(ans);
+                    }
+                });
+
+            }
         </script>
         
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top nav_bar" id="navbar">
-            <a class="navbar-brand">MyMentor</a>
+            <a class="navbar-brand">MentorMeForCollege&Career</a>
             <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -501,13 +510,15 @@ async function show_mentor() {
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Service
+                        Services
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Volunteer</a>
+                            <a class="dropdown-item" href="#">Leadership</a>
+                            <a class="dropdown-item" href="#">Volunteers</a>
                             <a class="dropdown-item" href="#">Scholarships</a>
                             <a class="dropdown-item" href="#">Dual Enrollment</a>
                             <a class="dropdown-item" href="#">Community Service</a>
+                            <a class="dropdown-item" href="#">CollegeBoard’s Guide</a>
                             <a class="dropdown-item" href="#">Advanced Summer Opportunities</a>
 
                         </div>
@@ -535,7 +546,7 @@ async function show_mentor() {
 
         <div class="container-fluid home_top">
             <div class="container top_content">
-                <h1>MyMentor</h1>
+                <h1>A school-based and student-friendly innovation that supports and mentors students for college and career</h1>
                 <hr>
                 <p>We aim to design a school-based and student-friendly service 
                     that supports and mentors students high school students for college and career.
